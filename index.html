@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+      integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="assets/styles/style.css" />
+    <title>Music Player</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="music-container">
+        <div id="cover-box">
+          <img src="./assets/images/cover1.jpg" alt="cover-image" class="one " id="cover" />
+          <img src="./assets/images/fff-removebg-preview.png" alt="cover-image" class="two" id="cover" />
+        </div>
+        <div id="music-box">
+          <audio id="disc"></audio>
+          <div id="music-info">
+            <h2 id="title"></h2>
+            <h3 id="artist"></h3>
+            <div id="timer-bar">
+              <span id="timer">0:00</span>
+              <span id="duration"></span>
+            </div>
+            <div id="progress-container">
+              <div id="progress"></div>
+            </div>
+          </div>
+          <div id="control-box">
+            <svg id="prev" class="special-btn" xmlns="http://www.w3.org/2000/svg" height="4em" viewBox="0 0 320 512"><style>svg{fill:#a05271}</style><path d="M267.5 440.6c9.5 7.9 22.8 9.7 34.1 4.4s18.4-16.6 18.4-29V96c0-12.4-7.2-23.7-18.4-29s-24.5-3.6-34.1 4.4l-192 160L64 241V96c0-17.7-14.3-32-32-32S0 78.3 0 96V416c0 17.7 14.3 32 32 32s32-14.3 32-32V271l11.5 9.6 192 160z"/></svg>
+            <svg id="play" class="special-btn" xmlns="http://www.w3.org/2000/svg" height="7em" viewBox="0 0 512 512"><style>svg{fill:#a05271}</style><path d="M0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zM188.3 147.1c-7.6 4.2-12.3 12.3-12.3 20.9V344c0 8.7 4.7 16.7 12.3 20.9s16.8 4.1 24.3-.5l144-88c7.1-4.4 11.5-12.1 11.5-20.5s-4.4-16.1-11.5-20.5l-144-88c-7.4-4.5-16.7-4.7-24.3-.5z"/></svg>
+            <svg id="next" class="special-btn" xmlns="http://www.w3.org/2000/svg" height="4em" viewBox="0 0 320 512"><style>svg{fill:#a05271}</style><path d="M52.5 440.6c-9.5 7.9-22.8 9.7-34.1 4.4S0 428.4 0 416V96C0 83.6 7.2 72.3 18.4 67s24.5-3.6 34.1 4.4l192 160L256 241V96c0-17.7 14.3-32 32-32s32 14.3 32 32V416c0 17.7-14.3 32-32 32s-32-14.3-32-32V271l-11.5 9.6-192 160z"/></svg>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section id="explore">
+      <section>
+        <div id="explore-title">
+          <h1>Explore</h1>
+        </div>
+        <div id="explore-tabs">
+          <ul id="explore-tab-list">
+            <li id="lyrics" class="tab-list-item">
+              <button onclick="showTabContent('lyrics')">Lyrics</button>
+            </li>
+            <li id="other-albums" class="tab-list-item">
+              <button onclick="showTabContent('otherAlbums')">
+                Other Albums
+              </button>
+            </li>
+            <li id="related-artists" class="tab-list-item">
+              <button onclick="showTabContent('relatedArtists')">
+                Related Artists
+              </button>
+            </li>
+          </ul>
+        </div>
+        <div id="explore-tab-content"></div>
+      </section>
+    </section>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js"
+      integrity="sha512-uMtXmF28A2Ab/JJO2t/vYhlaa/3ahUOgj1Zf27M5rOo8/+fcTUVH0/E0ll68njmjrLqOBjXM3V9NiPFL5ywWPQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="assets/scripts/script.js"></script>
+  </body>
+</html>
